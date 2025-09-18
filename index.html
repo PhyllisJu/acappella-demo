@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>ACappellaSet</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>ACappellaSet: A Multilingual A Cappella Dataset for Source Separation and AI-assisted Rehearsal Tools
+            </h1>
+            <h2>Authors: Ting-Yu Pan, Phyllis Ju, Hao-Wen Dong</h2>
+            <p>A cappella music presents unique challenges for source separation due to its diverse vocal styles and the
+                presence of vocal percussion. Current a cappella datasets are limited in size and diversity, hindering
+                the
+                development of robust source separation models. We are building ACappellaSet, a collection of 55
+                professionally recorded a cappella songs performed by three professional groups. Preliminary experiment
+                results showed that fine-tuning Demucs on ACappellaSet substantially improves vocal percussion (VP)
+                separation, raising VP SDR from 5.22 dB to 7.62 dB. We envision that ACappellaSet can be further
+                strengthened through AI-driven dataset augmentation. ACappellaSet has the potential for a cappella /
+                choir
+                source separation and supporting tools for asynchronous a cappella rehearsals.</p>
+            <div class="header-links">
+                <a href="" target="_blank">ACappellaSet Paper</a>
+                <a href="https://dl.acm.org/doi/10.1145/3746058.3758370" target="_blank">AcaMate Paper</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <h3>VP Separation Demo</h3>
+        <div class="vp-demo">
+            <section class="song">
+                <h4>Start (SATB + VP, Korean, Dry)</h4>
+                <div class="audio-sample">
+                    <p>Original Mixture</p>
+                    <audio controls>
+                        <source src="audios/CK04_dry/00_mixture.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="satb-group">
+                    <div class="audio-sample">
+                        <p>Ground Truth SATB</p>
+                        <audio controls>
+                            <source src="audios/CK04_dry/01_GT_SATB.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated SATB (Demucs, Pre-trained)</p>
+                        <audio controls>
+                            <source src="audios/CK04_dry/02_Pretrain_SATB.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated SATB (Demucs, Fine-tuned on ACappellaSet)</p>
+                        <audio controls>
+                            <source src="audios/CK04_dry/03_Finetune_SATB.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="vp-group">
+                    <div class="audio-sample">
+                        <p>Ground Truth VP</p>
+                        <audio controls>
+                            <source src="audios/CK04_dry/01_GT_VP.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated VP (Demucs, Pre-trained)</p>
+                        <audio controls>
+                            <source src="audios/CK04_dry/02_Pretrain_VP.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated VP (Demucs, Fine-tuned on ACappellaSet)</p>
+                        <audio controls>
+                            <source src="audios/CK04_dry/03_Finetune_VP.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </section>
+
+            <section class="song">
+                <h4>頭前 (SATB + VP, Haka, Dry)</h4>
+                <div class="audio-sample">
+                    <p>Original Mixture</p>
+                    <audio controls>
+                        <source src="audios/O006_dry/00_mixture.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="satb-group">
+                    <div class="audio-sample">
+                        <p>Ground Truth SATB</p>
+                        <audio controls>
+                            <source src="audios/O006_dry/01_GT_SATB.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated SATB (Demucs, Pre-trained)</p>
+                        <audio controls>
+                            <source src="audios/O006_dry/02_Pretrain_SATB.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated SATB (Demucs, Fine-tuned on ACappellaSet)</p>
+                        <audio controls>
+                            <source src="audios/O006_dry/03_Finetune_SATB.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="vp-group">
+                    <div class="audio-sample">
+                        <p>Ground Truth VP</p>
+                        <audio controls>
+                            <source src="audios/O006_dry/01_GT_VP.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated VP (Demucs, Pre-trained)</p>
+                        <audio controls>
+                            <source src="audios/O006_dry/02_Pretrain_VP.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-sample">
+                        <p>Separated VP (Demucs, Fine-tuned on ACappellaSet)</p>
+                        <audio controls>
+                            <source src="audios/O006_dry/03_Finetune_VP.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <h3>AcaMate: Supporting Novice A Cappella Singers in Iterative Individual Practice</h3>
+        <p>Novice singers in collegiate A cappella groups often struggle with individual practice due to limited
+            guidance and the challenges of asynchronous rehearsal. We propose <strong>AcaMate</strong>, a system
+            designed to support
+            individual practice by integrating group recordings, visualizing musical patterns across voice parts, and
+            providing intuitive feedback to guide iterative and deliberate practice.</p>
+        <img src="images/pipeline.jpg" alt="A pipeline of AcaMate">
+        <img src="images/interface.png" alt="The interface of AcaMate">
+    </main>
+
+    <footer>
+        <p>© 2025 ACappellaSet. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
